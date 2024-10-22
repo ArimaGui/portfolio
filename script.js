@@ -13,9 +13,37 @@ loginBtn.addEventListener("click", () => {
 });
 
 hrefGabi.addEventListener("click", () => {
-  window.location.href = "#gabi-portfolio";
+  document.getElementById("gabi-portfolio").scrollIntoView({
+    behavior: "smooth",
+  });
 });
 
 hrefGui.addEventListener("click", () => {
-  window.location.href = "#gui-portfolio";
+  document.getElementById("gui-portfolio").scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+window.onscroll = () => {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const btn = document.getElementById("btnVoltarTopo");
+
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    btn.style.display = "flex";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+document.getElementById("btnVoltarTopo").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
