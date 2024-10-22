@@ -321,6 +321,20 @@ main {
   width: 100%;
 }
 
+.img-container #baleia {
+  position: absolute;
+  width: 100px;
+  top: 69%;
+  right: 10%;
+}
+
+.img-container #golfinho {
+  position: absolute;
+  width: 100px;
+  top: 18%;
+  right: 36%;
+}
+
 .info.general p {
   max-width: 800px;
 }
